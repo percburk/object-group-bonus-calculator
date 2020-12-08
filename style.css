@@ -40,8 +40,7 @@ h1 {
   box-sizing: border-box;
   border: 2px solid black;
   padding: 5px;
-  outline: none;
-  
+  outline: none; 
 }
 
 #bonusList {
