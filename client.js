@@ -39,6 +39,12 @@ const employees = [
 
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
+$(document).ready(readyNow);
+
+function readyNow() {
+  console.log('JQ');
+  $('#calcaulateBonus').on('click', bonusLoop);
+}
 
 console.log(employees);
 
@@ -84,5 +90,5 @@ function bonusCalculator(employee) {
   return employeeBonus;
 }
 
-console.log(bonusCalculator(employees[2]));
-bonusLoop(employees);
+
+
