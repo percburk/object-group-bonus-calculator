@@ -46,7 +46,6 @@ h1 {
 
 #bonusList {
   margin: 10px;
-  margin-left: ;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; 
