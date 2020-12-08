@@ -5,49 +5,49 @@ html {
     width: 100vw;
  }
 
- body {
-    margin: 0;
-    background-color: #fff;
-  }
-  
-  header {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    background-color: #546e7a;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0px 3px 2px #222;
-  }
-  
-  h1 {
-    background-color: #29434e;
-    font-family: 'Source Sans Pro';
-    font-weight: 600;
-    font-size: 36px;
-    color: #fff;
-    padding: 2px;
-    margin: 0;
-    width: inherit;
-    text-align: center;
-    text-shadow: 1px 1px 2px #000000;
-  }
+body {
+  margin: 0;
+  background-color: #fff;
+}
 
-  #calculateBonus {
-    margin: 10px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    padding: 5px;
-    outline: none;
-    
-  }
+header {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  background-color: #546e7a;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 3px 2px #222;
+}
 
-  #bonusList {
-    margin: 10px;
-    margin-left: ;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; 
-  }
+h1 {
+  background-color: #29434e;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: 36px;
+  color: #fff;
+  padding: 2px;
+  margin: 0;
+  width: inherit;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+#calculateBonus {
+  margin: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 5px;
+  outline: none;
+  
+}
+
+#bonusList {
+  margin: 10px;
+  margin-left: ;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+}

@@ -98,7 +98,7 @@ function bonusCalculator(employee) {
 }
 
 function displayBonus() {
-  let el = $('#bonusList');
+  let el = $("#bonusList");
   el.empty();
   for (object of bonuses) {
     el.append(
@@ -107,9 +107,7 @@ function displayBonus() {
           <li class="li">Bonus Percentage: ${object.bonusPercentage * 100}%</li>
           <li class="li">Total Bonus: $${object.totalBonus}</li>
           <li class="li">Total Compensation: $${object.totalCompensation}</li>
-        </ul>`);
+        </ul>`
+    );
   }
 }
-
-
-
