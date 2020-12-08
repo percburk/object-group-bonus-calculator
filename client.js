@@ -41,3 +41,35 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+function bonusCalculator(employee) {
+  let employeeBonus = {};
+  employeeBonus.name = employee.name;
+  if (employee.reviewRating <= 2) {
+    employeeBonus.bonusPercentage = 0;
+  } else if (employee.reviewRating === 3) {
+    employeeBonus.bonusPercentage = 0.04;
+  } else if (employee.reviewRating === 4) {
+    employeeBonus.bonusPercentage = 0.06;
+  } else if (employee.reviewRating === 5) {
+    employeeBonus.bonusPercentage = 0.1;
+  } 
+  if (employee.employeeNumber.length === 4) {
+    employeeBonus.bonusPercentage += 0.05;
+  }
+  if (employee.annualSalary > 65000) {
+    employeeBonus.bonusPercentage -= 0.01;
+  }
+  if (employeeBonus.bonusPercentage > 0.13) {
+    employeeBonus.bonusPercentage = 0.13;
+  } else if (employeeBonus.bonusPercentage < 0) {
+    employeeBonus.bonusPercentage = 0;
+  }
+  employeeBonus.totalBonus = Math.round
+    (employeeBonus.bonusPercentage * employee.annualSalary);
+  employeeBonus.totalCompensation = employeeBonus.totalBonus + 
+    Number(employee.annualSalary);
+  return employeeBonus;
+}
+
+console.log(bonusCalculator(employees[2]));
