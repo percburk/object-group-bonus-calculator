@@ -39,19 +39,26 @@ const employees = [
 
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
+
 $(document).ready(readyNow);
 
+const bonuses = [];
+
 function readyNow() {
-  console.log('JQ');
-  $('#calcaulateBonus').on('click', bonusLoop);
+  $("#calculateBonus").on("click", onClick);
 }
 
-console.log(employees);
+function onClick() {
+  bonusLoop(employees);
+  displayBonus();
+}
 
 function bonusLoop(array) {
   for (i = 0; i < array.length; i++) {
     console.log(bonusCalculator(array[i]));
+    bonuses.push(bonusCalculator(array[i]));
   }
+  return bonuses;
 }
 
 function bonusCalculator(employee) {
@@ -88,6 +95,20 @@ function bonusCalculator(employee) {
     employeeBonus.totalBonus + Number(employee.annualSalary);
 
   return employeeBonus;
+}
+
+function displayBonus() {
+  let el = $('#bonusList');
+  el.empty();
+  for (object of bonuses) {
+    el.append(
+      `<p class="p">Employee Name: ${object.name}</p>
+        <ul class="ul">
+          <li class="li">Bonus Percentage: ${object.bonusPercentage * 100}%</li>
+          <li class="li">Total Bonus: $${object.totalBonus}</li>
+          <li class="li">Total Compensation: $${object.totalCompensation}</li>
+        </ul>`);
+  }
 }
 
 
