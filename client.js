@@ -103,11 +103,11 @@ function displayBonus() {
   for (object of bonuses) {
     el.append(
       `<p class="p">Employee Name: ${object.name}</p>
-        <ul class="ul">
-          <li class="li">Bonus Percentage: ${object.bonusPercentage * 100}%</li>
-          <li class="li">Total Bonus: $${object.totalBonus}</li>
-          <li class="li">Total Compensation: $${object.totalCompensation}</li>
-        </ul>`
+      <ul class="ul">
+        <li class="li">Bonus Percentage: ${object.bonusPercentage * 100}%</li>
+        <li class="li">Total Bonus: $${object.totalBonus}</li>
+        <li class="li">Total Compensation: $${object.totalCompensation}</li>
+      </ul>`
     );
   }
 }
